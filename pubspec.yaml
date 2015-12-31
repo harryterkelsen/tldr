@@ -3,7 +3,7 @@ version: 0.0.1
 description: >
   A simple client for tldr, a collection of simplified man pages.
 author: Harry Terkelsen <harry@terkelsen.io>
-#homepage: https://www.example.com
+homepage: https://github.com/hterkelsen/tldr
 
 environment:
   sdk: '>=1.0.0 <2.0.0'
