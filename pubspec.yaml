@@ -6,7 +6,7 @@ author: Harry Terkelsen <harry@terkelsen.io>
 homepage: https://github.com/hterkelsen/tldr
 
 environment:
-  sdk: '>=1.0.0 <2.0.0'
+  sdk: '>=1.8.0 <2.0.0'
 
 dependencies:
   ansicolor: ^0.0.9
