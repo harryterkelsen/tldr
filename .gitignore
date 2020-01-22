@@ -1,16 +1,10 @@
 # Files and directories created by pub
+.dart_tool/
 .packages
-.pub/
 build/
-packages
-pubspec.lock # (Remove this pattern if you wish to check in your lock file)
 
-# Files created by dart2js
-*.dart.js
-*.part.js
-*.js.deps
-*.js.map
-*.info.json
+# Remove this pattern if you wish to check in your lock file
+pubspec.lock 
 
 # Directory created by dartdoc
 doc/api/

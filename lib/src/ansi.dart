@@ -2,14 +2,14 @@ import 'package:ansicolor/ansicolor.dart';
 
 import 'page.dart';
 
-AnsiPen _green = new AnsiPen()..green();
-AnsiPen _redOnBlack = new AnsiPen()
+AnsiPen _green = AnsiPen()..green();
+AnsiPen _redOnBlack = AnsiPen()
   ..red()
   ..black(bg: true);
-AnsiPen _white = new AnsiPen()..white();
+AnsiPen _white = AnsiPen()..white();
 
 String toAnsi(Page page) {
-  var buffer = new StringBuffer();
+  var buffer = StringBuffer();
   buffer.writeln();
   for (var description in page.description) {
     buffer.writeln(description);
@@ -27,8 +27,7 @@ String toAnsi(Page page) {
 
 String _colorizeCommand(String command) {
   var base = _redOnBlack.down;
-  base += command.replaceAllMapped(new RegExp(r'{{([^}]*)}}'),
-      (match) {
+  base += command.replaceAllMapped(RegExp(r'{{([^}]*)}}'), (match) {
     return _white(match.group(1)) + _redOnBlack.down;
   });
   base += _redOnBlack.up;

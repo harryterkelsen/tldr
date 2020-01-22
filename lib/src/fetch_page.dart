@@ -26,8 +26,7 @@ Iterable<String> get prefixes {
 
 Future<Page> fetch(String command) async {
   for (var prefix in prefixes) {
-    var rawPage =
-        await http.get(path.join(prefix, command + '.md'));
+    var rawPage = await http.get(path.join(prefix, command + '.md'));
     if (rawPage.statusCode == 200) {
       var page = parseLines(LineSplitter.split(rawPage.body));
       if (page != null) return page;

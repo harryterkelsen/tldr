@@ -29,13 +29,10 @@ void main() {
     var page = parseLines(tar.split('\n'));
     expect(page, isNotNull);
     expect(page.name, 'tar');
-    expect(page.description, [
-      'Archiving utility',
-      'Optional compression with gzip / bzip'
-    ]);
+    expect(page.description,
+        ['Archiving utility', 'Optional compression with gzip / bzip']);
     expect(page.examples.length, 3);
-    expect(page.examples.first.description,
-        'create an archive from files');
+    expect(page.examples.first.description, 'create an archive from files');
     expect(page.examples.first.command,
         'tar cf {{target.tar}} {{file1 file2 file3}}');
   });
