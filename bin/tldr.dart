@@ -23,7 +23,7 @@ Future main(List<String> arguments) async {
   print(toAnsi(page));
 }
 
-usage() {
+void usage() {
   print('usage: tldr command-name');
   exitCode = 1;
 }
