@@ -38,8 +38,8 @@ Page parseLines(Iterable<String> lines) {
     if (expecting == '`') {
       if (!line.startsWith('`')) return null;
       if (!line.endsWith('`')) return null;
-      examples.add(new Example(exampleDescription,
-          line.substring(1, line.length - 1).trim()));
+      examples.add(Example(
+          exampleDescription, line.substring(1, line.length - 1).trim()));
       exampleDescription = null;
       expecting = '-';
       continue;
@@ -53,5 +53,5 @@ Page parseLines(Iterable<String> lines) {
     return null;
   }
 
-  return new Page(name, description, examples);
+  return Page(name, description, examples);
 }

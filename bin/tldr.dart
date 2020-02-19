@@ -15,16 +15,15 @@ Future main(List<String> arguments) async {
   var command = arguments.single;
   var page = await fetch(command);
   if (page == null) {
-    var pen = new AnsiPen()..red();
-    print(pen('ERROR:') +
-        ' No entry could be found for \'$command\'.');
+    var pen = AnsiPen()..red();
+    print(pen('ERROR:') + ' No entry could be found for \'$command\'.');
     exitCode = 1;
     return;
   }
   print(toAnsi(page));
 }
 
-usage() {
+void usage() {
   print('usage: tldr command-name');
   exitCode = 1;
 }
