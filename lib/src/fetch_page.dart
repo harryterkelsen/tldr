@@ -11,7 +11,7 @@ import 'page.dart';
 import 'parse.dart';
 
 final String baseUrl =
-    'https://raw.githubusercontent.com/tldr-pages/tldr/master/pages/';
+    'https://raw.githubusercontent.com/tldr-pages/tldr/main/pages/';
 
 Iterable<String> get prefixes {
   var folders = ['common'];
